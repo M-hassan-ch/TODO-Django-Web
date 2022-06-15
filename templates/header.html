@@ -1,0 +1,19 @@
+
+
+  <header style="background-color: #0e387a; font-size: 30px;">
+    <div class="container">
+      <div class="row justify-content-between py-3">
+        <div class="col-md-3">
+          <a style="color: #9fafca; font-weight: 800;  text-decoration: none;" >TODO</a>
+        </div>
+        <div class="col-md-3">
+          {% if request.user.is_authenticated %}
+          <a class="" style="color: #9fafca;  text-decoration: none;" href="/logout">logout</a>
+          {% else %}
+          <a class="me-3" style="color: #9fafca; text-decoration: none;" href="/login">login</a>
+          <a class="me-3" style="color: #9fafca; text-decoration: none;" href="/register">Sign-up</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </header>
